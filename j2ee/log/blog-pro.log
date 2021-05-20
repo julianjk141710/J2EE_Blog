@@ -1,0 +1,6 @@
+2021-05-20 17:16:42.283  INFO 14724 --- [restartedMain] com.j2ee.blog.BlogApplication            : Starting BlogApplication using Java 11.0.5 on julianMacBook-Pro with PID 14724 (/Users/apple/Projects/j2ee/target/classes started by apple in /Users/apple/Projects/j2ee)
+2021-05-20 17:16:42.287  INFO 14724 --- [restartedMain] com.j2ee.blog.BlogApplication            : The following profiles are active: pro
+2021-05-20 17:16:45.347  WARN 14724 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-05-20 17:16:47.980  WARN 14724 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-20 17:16:48.896  WARN 14724 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-05-20 17:16:49.201  INFO 14724 --- [restartedMain] com.j2ee.blog.BlogApplication            : Started BlogApplication in 7.622 seconds (JVM running for 9.435)
