@@ -1,0 +1,46 @@
+@RequestMapping
+RequestMapping是一个用来处理请求地址映射的注解，可用于类或方法上。用于类上，表示类中的所有响应请求的方法都是以该地址作为父路径。
+
+//使数据库自动生成相关实体
+@Entity(name = "t_blog")
+
+//id标示主键
+//GeneratedValue 自动生成
+@Id
+@GeneratedValue
+
+//1的一端是被维护的
+@OneToMany(mappedBy = "blog")
+
+@ManyToMany(cascade = {CascadeType.PERSIST})
+
+
+//@Temporal(TemporalType.TIMESTAMP) 会得到形如'HH:MM:SS' 格式的日期
+@Temporal(TemporalType.TIMESTAMP)
+private Date createTime;
+
+
+//不加注解无法使用service
+@Service
+public class UserServiceImpl implements UserService{
+    //注入UserRepository
+    @Autowired
+    private UserRepository userRepository;
+    @Override
+    public User checkUser(String username, String password) {
+        User user = userRepository.findByUsernameAndPassword(username, password);
+        return user;
+    }
+}
+
+
+//User 和 User的主键类型
+public interface UserRepository extends JpaRepository<User, Long> {
+    User findByUsernameAndPassword(String username, String password);
+}
+
+
+第二种写法可以通过@RequestParam(required = false)设置为非必传。因为required值默认是true，所以默认必传
+第二种写法可以通过@RequestParam("userId")或者@RequestParam(value = "userId")指定参数名
+第二种写法可以通过@RequestParam(defaultValue = "0")指定参数默认值
+
