@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- th:fragment 定义用于加载的块 -->
+    <span th:fragment="pagination">
+        the public pagination
+    </span>
+
+<footer th:fragment="footer" class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+            <div class="three wide column">
+                <div class="ui inverted link list">
+
+                </div>
+            </div>
+            <div class="three wide column" >
+                <h4 class="ui inverted header m-text-thin m-text-spaced " >最新博客</h4>
+                <div id="newblog-container">
+
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我们</h4>
+
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">开发人员</h4>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © </span> Designed by JavaEE Project</p>
+    </div>
+
+</footer>
+</body>
+</html>
